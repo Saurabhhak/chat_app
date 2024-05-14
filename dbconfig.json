@@ -1,0 +1,8 @@
+{
+    "host": "localhost",
+    "user": "admin",
+    "password": "root",
+    "database": "chat_app",
+    "url":"mysql://admin:root@localhost:3306/chat_app",
+    "connectionString":"postgres://postgres:root@localhost:5432/chat_app"
+}

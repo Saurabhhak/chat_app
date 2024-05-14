@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat wave</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="chat">
+
+        <div id="side-panel">
+            <div id="chat" class="side-panel-item centered">
+                <span class="material-symbols-outlined">chat</span>
+            </div>
+            <div id="user" class="side-panel-item ">
+                <span class="material-symbols-outlined centered">account_circle</span>
+            </div>
+            <div id="setting" class="side-panel-item" onclick="location.href='/logout'">
+                <span class="material-symbols-outlined">settings</span>
+            </div>
+        </div>
+        <div id="middle-pannel">
+            <header id="mp-header">
+                <span>WAVE CHAT</span>
+                <!-- <span class="material-symbols-outlined">chat_add_on</span> -->
+                <!-- <button id="new-btn">NEW</button> -->
+            </header>
+            <div id="mp-search">
+                <input id="mp-search-input" type="text" placeholder="Search a User">
+                <!-- <button id="mp-search-btn">Search</button> -->
+                <div id="search-controls">
+                    <label for="friend-id">
+                        <input type="radio" value="friends" name="search-filter" id="friend-id">
+                        Friends
+                    </label>
+                    <label for="new-id">
+                        <input type="radio" value="new" name="search-filter" id="new-id" checked>
+                        New
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div id="user-cart">
+                <div class="user-info">
+
+                    <div class="ui-logo centered"><span class="material-symbols-outlined">person</span></div>
+                    <div class="ui-name">USERNAME</div>
+                </div>
+                <div class="user-info">
+
+                    <div class="ui-logo centered"><span class="material-symbols-outlined">person</span></div>
+                    <div class="ui-name">USERNAME</div>
+                </div>
+                <div class="user-info">
+
+                    <div class="ui-logo centered"><span class="material-symbols-outlined">person</span></div>
+                    <div class="ui-name">USERNAME</div>
+                </div>
+
+            </div>
+        </div>
+        <div id="chat-box-pannel" data-state="empty">
+            <div id="chat-box-empty">CHATs will Appear Here...</div>
+            <div id="chat-box-body">
+                <div class="user-header">
+                    <!-- <span class="material-symbols-outlined">person</span> -->
+                    <div class="ui-logo"></div>
+                    <div class="username" id="username-box">
+                        user-name
+                    </div>
+                </div>
+                <div id="chat-body">
+                    <!-- <label for="text-area"></label> -->
+                    <!-- <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea><br> -->
+                    <div id="message-box">
+                        <!-- <div class="chat-message">Hi</div>
+                        <div class="chat-message">Hi</div> -->
+                    </div>
+                    <div class="input-box">
+
+                        <label for="msg-box"></label>
+                        <input id=chat-input class="message-input" type="text" name="msg-box"
+                            placeholder="Type a message">
+                        <button id="b_send"> <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat.js" type="module"></script>
+
+</html>
